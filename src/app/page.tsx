@@ -213,7 +213,7 @@ const Team = () => {
 const Leadership = () => {
   // Put real data here (or fetch it).
   const leaders = [
-    { img: '/leader-lewie.avif',   name: 'Lewie Lawrence',  role: 'Chief Engineer' },
+    { img: '/leader-lewie.avif',   name: 'Celia Radke',  role: 'Chief Engineer' },
     { img: '/leader-kabir.avif',  name: 'Kabir Khwaja',   role: 'President' },
     { img: '/leader-fernando.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
     { img: '/leader-dan.avif',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
@@ -260,7 +260,6 @@ const Faculty = () => (
     <Gallery>
       {[
         { img: '/faculty-halow.jpg', name: 'George F. Halow', role: 'Professor of Practice of Aerospace Engineering' },
-        { img: '/faculty-tzoumas.jpg', name: 'Vasileios Tzoumas', role: 'Assistant Professor of Aerospace Engineering' },
       ].map(member => (
         <ProfileCard key={member.name} img={member.img} name={member.name} role={member.role} />
       ))}
@@ -275,9 +274,9 @@ const Involved = () => (
   <section className="bg-blue-600 text-white py-20 px-4 text-center">
     <h2 className="text-3xl md:text-4xl font-bold mb-6">Get Involved!</h2>
     <p className="text-lg mb-4">Come to our meetings! We welcome new members at any point. There is no application process or member requirements.</p>
-    <p className="text-lg mb-2 font-semibold">Full Team Meetings F25:</p>
-    <p>Sundays 2‑4 pm @ FXB 1024</p>
-    <p>Wednesdays 6‑8 pm @ CSRB 2230 (CAEN Lab)</p>
+    <p className="text-lg mb-2 font-semibold">Full Team Meetings W26:</p>
+    <p>Mondays 6-8 pm @ GFL CAEN Lab (GFL 224)</p>
+    <p>Wednesdays 6-8 pm @ NAME CAEN Lab (NAME 134)</p>
   </section>
 );
 

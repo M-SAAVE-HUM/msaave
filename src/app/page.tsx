@@ -213,16 +213,18 @@ const Team = () => {
 const Leadership = () => {
   // Put real data here (or fetch it).
   const leaders = [
-    { img: '/leader-lewie.avif',   name: 'Celia Radke',  role: 'Chief Engineer' },
-    { img: '/leader-kabir.avif',  name: 'Kabir Khwaja',   role: 'President' },
-    { img: '/leader-fernando.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
-    { img: '/leader-dan.avif',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
-    { img: '/leader-elise.avif',   name: 'Elise VeCasey',     role: 'Aerodynamics' },
-    { img: '/leader-ali.jpg',   name: 'Ali Mothana',     role: 'Avionics' },
-    { img: '/leader-lucie.avif',   name: 'Lucie Kovarick',     role: 'Systems' },
-    { img: '/leader-kabir.avif',   name: 'Celia Radke',     role: 'Structures' },
-    { img: '/leader-josh.avif',   name: 'Josh Zirin',     role: 'Structures' },
-    { img: '/leader-kabir.avif',   name: 'Ashton Boichet',     role: 'Power & Propulsion' },
+    { img: '/leader-kabir.avif',   name: 'Josh Zirin',  role: 'President' },
+    { img: '/leader-kabir.avif',  name: 'Celia Radke',   role: 'Chief Engineer' },
+    { img: '/leader-kabir.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
+    { img: '/leader-kabir.avif',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
+    { img: '/leader-kabir.avif',   name: 'Stephanie Suciu',     role: 'Structures' },
+    { img: '/leader-kabir.avif',   name: 'Emmet Payette',     role: 'Structures' },
+    { img: '/leader-kabir.avif',   name: 'Claire Wattenbach',     role: 'Systems' },
+    { img: '/leader-kabir.avif',   name: 'Madison Mendoza',     role: 'Aerodynamics' },
+    { img: '/leader-kabir.avif',   name: 'Ali Mothana',     role: 'Avionics' },
+    { img: '/leader-kabir.avif',   name: 'Morgan Pen',     role: 'Power & Propulsion' },
+    { img: '/leader-kabir.avif',   name: 'Jack Wright',     role: 'Safety Lead' },
+    { img: '/leader-kabir.avif',   name: 'Pato Gonzalez',     role: 'Outreach Lead' },
   ];
 
   return (
@@ -305,8 +307,8 @@ const Contact = () => (
         <h3 className="text-xl font-semibold mb-2">Inquiries</h3>
         <p className="mb-4">For any inquiries, questions, or commendations, please email <a href="mailto:msaave.recruiting@umich.edu" className="text-blue-600 underline">msaave.recruiting@umich.edu</a> or fill out the form.</p>
         <h3 className="text-xl font-semibold mb-2">Social Media</h3>
-        <p>Instagram: <a href="https://instagram.com/msaave_umich" className="text-blue-200 underline" target="_blank" rel="noopener noreferrer">@msaave_umich</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/company/michigan-sustainability-applications-for-aerospace-vehicle-engineering/" className="text-blue-200 underline" target="_blank" rel="noopener noreferrer">M‑SAAVE LinkedIn</a></p>
+        <p>Instagram: <a href="https://instagram.com/msaave_umich" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">@msaave_umich</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/company/michigan-sustainability-applications-for-aerospace-vehicle-engineering/" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">M‑SAAVE LinkedIn</a></p>
       </div>
 
       {/* Simple contact form – replace with your preferred form handler */}

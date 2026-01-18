@@ -216,7 +216,7 @@ const Team = () => {
 const Leadership = () => {
   // Put real data here (or fetch it).
   const leaders = [
-    { img: '/leader-josh.avif',   name: 'Josh Zirin',  role: 'President' },
+    { img: '/leader-josh.jpg',   name: 'Josh Zirin',  role: 'President' },
     { img: '/leader-celia.avif',  name: 'Celia Radke',   role: 'Chief Engineer' },
     { img: '/leader-fernando.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
     { img: '/leader-dan.jpg',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },

@@ -30,6 +30,7 @@ const Navbar = () => {
   const links = [
     { href: '#home', label: 'HOME' },
     { href: '#about', label: 'ABOUT' },
+    { href: '#clamm', label: 'CLAMM' },
     { href: '#hum', label: 'HUM' },
     { href: '#leadership', label: 'LEADERSHIP' },
     { href: '#contact', label: 'CONTACT' },
@@ -91,7 +92,9 @@ const MobileMenu = ({ links }: { links: { label: string; href: string }[] }) => 
 /* ------------------------------ GALLERY --------------------------- */
 /* ------------------------------------------------------------------ */
 const Gallery = ({ children }: { children: React.ReactNode }) => (
-  <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-4">{children}</div>
+  <div className="grid gap-12 place-items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+    {children}
+  </div>
 );
 
 /* ------------------------------------------------------------------ */
@@ -107,7 +110,7 @@ const Hero = () => (
       src="/hero.jpg" // ensure the file exists in /public
       alt="Hero background"
       fill
-      sizes="100vw"
+      sizes="100%"
       priority
       className="object-cover" // no negative z‑index so it sits at z‑0
     />
@@ -189,9 +192,9 @@ const Mission = () => (
 /* ------------------------------------------------------------------ */
 const Team = () => {
   const teamMembers = [
-    { img: '/team-1.avif' },
-    { img: '/team-2.avif' },
-    { img: '/team-3.avif' },
+    { img: '/team-1.jpg' },
+    { img: '/team-2.jpg' },
+    { img: '/plane-hum.jpg' },
     { img: '/team-4.avif' },
   ];
 
@@ -213,18 +216,18 @@ const Team = () => {
 const Leadership = () => {
   // Put real data here (or fetch it).
   const leaders = [
-    { img: '/leader-kabir.avif',   name: 'Josh Zirin',  role: 'President' },
-    { img: '/leader-kabir.avif',  name: 'Celia Radke',   role: 'Chief Engineer' },
-    { img: '/leader-kabir.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
-    { img: '/leader-kabir.avif',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
-    { img: '/leader-kabir.avif',   name: 'Stephanie Suciu',     role: 'Structures' },
-    { img: '/leader-kabir.avif',   name: 'Emmet Payette',     role: 'Structures' },
-    { img: '/leader-kabir.avif',   name: 'Claire Wattenbach',     role: 'Systems' },
-    { img: '/leader-kabir.avif',   name: 'Madison Mendoza',     role: 'Aerodynamics' },
-    { img: '/leader-kabir.avif',   name: 'Ali Mothana',     role: 'Avionics' },
-    { img: '/leader-kabir.avif',   name: 'Morgan Pen',     role: 'Power & Propulsion' },
-    { img: '/leader-kabir.avif',   name: 'Jack Wright',     role: 'Safety Lead' },
-    { img: '/leader-kabir.avif',   name: 'Pato Gonzalez',     role: 'Outreach Lead' },
+    { img: '/leader-josh.avif',   name: 'Josh Zirin',  role: 'President' },
+    { img: '/leader-celia.avif',  name: 'Celia Radke',   role: 'Chief Engineer' },
+    { img: '/leader-fernando.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
+    { img: '/leader-dan.jpg',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
+    { img: '/leader-stephanie.avif',   name: 'Stephanie Suciu',     role: 'Structures' },
+    { img: '/leader-emmet.avif',   name: 'Emmet Payette',     role: 'Structures' },
+    { img: '/leader-claire.jpg',   name: 'Claire Wattenbach',     role: 'Systems' },
+    { img: '/leader-madison.png',   name: 'Madison Mendoza',     role: 'Aerodynamics' },
+    { img: '/leader-ali.jpg',   name: 'Ali Mothana',     role: 'Avionics' },
+    { img: '/leader-morgan.avif',   name: 'Morgan Pen',     role: 'Power & Propulsion' },
+    { img: '/leader-jack.avif',   name: 'Jack Wright',     role: 'Safety Lead' },
+    { img: '/leader-pato.avif',   name: 'Pato Gonzalez',     role: 'Outreach Lead' },
   ];
 
   return (
@@ -244,10 +247,26 @@ const Leadership = () => {
   );
 };
 
-
-const ProfileCard = ({ img, name, role }: { img: string | StaticImageData; name?: string; role?: string }) => (
+const ProfileCard = ({
+  img,
+  name,
+  role,
+}: {
+  img: string | StaticImageData;
+  name?: string;
+  role?: string;
+}) => (
   <div className="flex flex-col items-center text-center">
-    <Image src={img} alt={name || 'Team photo'} width={200} height={200} className="rounded-full object-cover" />
+    <div className="relative w-64 h-64 md:w-72 md:h-72">
+      <Image
+        src={img}
+        alt={name || 'Team photo'}
+        fill
+        className="rounded-full object-cover"
+        sizes="(min-width: 768px) 320px, 288px"
+      />
+    </div>
+
     {name && <h4 className="mt-4 font-semibold">{name}</h4>}
     {role && <p className="text-sm text-gray-600">{role}</p>}
   </div>

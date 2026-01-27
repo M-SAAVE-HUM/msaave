@@ -216,15 +216,15 @@ const Team = () => {
 const Leadership = () => {
   // Put real data here (or fetch it).
   const leaders = [
-    { img: '/leader-josh.avif',   name: 'Josh Zirin',  role: 'President' },
-    { img: '/leader-celia.jpeg',  name: 'Celia Radke',   role: 'Chief Engineer' },
+    { img: '/leader-josh.avif',   name: 'Josh Zirin',  role: 'President', imgPosition: "center 10%" },
+    { img: '/leader-celia.jpeg',  name: 'Celia Radke',   role: 'Chief Engineer', imgPosition: "center 10%" },
     { img: '/leader-fernando.avif',  name: 'Fernando de Torres',     role: 'Business Director' },
-    { img: '/leader-dan.jpg',   name: 'Dan Fenton',     role: 'Payload Design & Delivery' },
+    { img: '/leader-dan.jpg',   name: 'Dan Fenton',     role: 'Payload Design & Delivery', imgPosition: "center 40%"},
     { img: '/leader-stephanie.avif',   name: 'Stephanie Suciu',     role: 'Structures' },
     { img: '/leader-emmet.avif',   name: 'Emmet Payette',     role: 'Structures' },
     { img: '/leader-claire.jpg',   name: 'Claire Wattenbach',     role: 'Systems' },
     { img: '/leader-madison.png',   name: 'Madison Mendoza',     role: 'Aerodynamics' },
-    { img: '/leader-ali.jpg',   name: 'Ali Mothana',     role: 'Avionics' },
+    { img: '/leader-ali.jpg',   name: 'Ali Mothana',     role: 'Avionics', imgPosition: "center 10%"},
     { img: '/leader-morgan.avif',   name: 'Morgan Pen',     role: 'Power & Propulsion' },
     { img: '/leader-jack.avif',   name: 'Jack Wright',     role: 'Safety Lead' },
     { img: '/leader-pato.avif',   name: 'Pato Gonzalez',     role: 'Outreach Lead' },
@@ -237,11 +237,11 @@ const Leadership = () => {
           Meet Our Leadership Team
         </h2>
 
-        <Gallery>
-          {leaders.map(({ img, name, role }) => (
-            <ProfileCard key={name} img={img} name={name} role={role} />
-          ))}
-        </Gallery>
+          <Gallery>
+            {leaders.map(({ img, name, role, imgPosition }) => (
+              <ProfileCard key={name} img={img} name={name} role={role} imgPosition={imgPosition} />
+            ))}
+          </Gallery>
       </div>
     </section>
   );
@@ -251,10 +251,12 @@ const ProfileCard = ({
   img,
   name,
   role,
+  imgPosition = "center"
 }: {
   img: string | StaticImageData;
   name?: string;
   role?: string;
+  imgPosition?: string;
 }) => (
   <div className="flex flex-col items-center text-center">
     <div className="relative w-64 h-64 md:w-72 md:h-72">
@@ -262,11 +264,11 @@ const ProfileCard = ({
         src={img}
         alt={name || 'Team photo'}
         fill
-        className="rounded-full object-cover"
+        className={`rounded-full object-cover`}
+        style={{ objectPosition: imgPosition }}
         sizes="(min-width: 768px) 320px, 288px"
       />
     </div>
-
     {name && <h4 className="mt-4 font-semibold">{name}</h4>}
     {role && <p className="text-sm text-gray-600">{role}</p>}
   </div>
